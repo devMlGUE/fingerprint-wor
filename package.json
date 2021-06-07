@@ -1,0 +1,12 @@
+{
+  "name": "@devmigue/fingerprint-wor",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "package to generate an unique fingerprint based on browser configuration.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "devMigue",
+  "license": "MIT"
+}
