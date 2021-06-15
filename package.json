@@ -3,6 +3,18 @@
   "version": "1.0.5",
   "type": "module",
   "description": "package to generate an unique fingerprint based on browser configuration.",
+  "keywords": [
+    "fingerprint",
+    "browser fingerprint",
+    "user fingerprint",
+    "fingerprinting",
+    "canvas",
+    "window fingerprint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devMlGUE/fingerprint-wor.git"
+  },
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
