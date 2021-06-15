@@ -1,6 +1,6 @@
 {
   "name": "@devmigue/fingerprint-wor",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "type": "module",
   "description": "package to generate an unique fingerprint based on browser configuration.",
   "main": "lib/index.js",
