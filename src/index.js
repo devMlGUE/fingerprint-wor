@@ -4,11 +4,11 @@ import windowScreen from "./methods/windowScreen.js";
 import dateData from "./methods/dateData.js";
 import render from "./methods/render.js";
 import window from "./methods/window.js";
+import encManager from "./encryption/encManager.js";
 
 export default (config = {}) => {
   const customConfig = Object.assign(defaultConfig, config);
   const { methods, debug } = customConfig;
-
   const methodFunctions = {
     dateData,
     render,
@@ -16,16 +16,15 @@ export default (config = {}) => {
     windowNavigator,
     windowScreen,
   }
+
   const methodKeys = Object.keys(methods);
   const userData = methodKeys.map((method) => {
     return methodFunctions[method](customConfig);
   });
 
-  console.log(userData);
-
   const dataString = JSON.stringify(userData);
-
   if (debug) console.log('fingerprint data', dataString);
 
-  return dataString;
+  const encType = customConfig.encType;
+  return encType === 'raw' ? dataString : encManager(dataString, encType);
 };

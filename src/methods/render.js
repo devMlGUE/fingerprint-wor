@@ -36,7 +36,8 @@ export const getCanvasID = (debug) => {
     }
 
     return result;
-  } catch {
+  } catch (error) {
+
     return null;
   }
 };
@@ -93,7 +94,8 @@ export const getWebglID = (debug) => {
     }
 
     return result;
-  } catch {
+  } catch (error) {
+    if (debug) console.log(error);
     return null;
   }
 };
@@ -108,7 +110,8 @@ export const getWebglInfo = () => {
       VENDOR: ctx.getParameter(ctx.VENDOR),
       SUPPORTED_EXTENSIONS: ctx.getSupportedExtensions(),
     };
-  } catch {
+  } catch (error) {
+    if (debug) console.log(error);
     return null;
   }
 };
