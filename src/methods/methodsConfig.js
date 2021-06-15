@@ -1,5 +1,6 @@
 const defaultConfig = {
   debug: false,
+  encType: 'raw',
   methods: {
     dateData: true,
     render: true,

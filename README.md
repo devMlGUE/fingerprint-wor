@@ -12,6 +12,7 @@ import fingerprintWor from 'fingerprint-wor';
 
 const config = {
   debug: false,
+  encType: 'md5',
   methods: {
     dateData: true,
     render: true,
@@ -34,11 +35,12 @@ console.log(fingerprint);
 
 ### Config
 Options in config object:
-- `debug`: enable debug mode, it logs the running methods. (default `false`)
-- `methods`: object with the methods that are enabled or disabled.
-  -  `dateData`: collect the timezone and date data to add to the fingerprint.
-  -  `render`: render a hidden canvas to get the browser fingerprint.
-  -  `window`: collect some data in the window object.
-  -  `windowNavigator`: collect some data in the window.navigator object.
-  -  `windowScreen`: collect some data in the window.screen object.
+- `debug [bool]`: enable debug mode, it logs the running methods (default `false`).
+- `encType [string]`: the output token encryption ('md5', 'sha256', 'raw') (default `'raw'`).
+- `methods [obj]`: object with the methods that are enabled or disabled.
+  -  `dateData [bool]`: collect the timezone and date data to add to the fingerprint (default `true`).
+  -  `render [bool]`: render a hidden canvas to get the browser fingerprint (default `true`).
+  -  `window [bool]`: collect some data in the `window` object (default `true`).
+  -  `windowNavigator [bool]`: collect some data in the `window.navigator` object (default `true`).
+  -  `windowScreen [bool]`: collect some data in the `window.screen` object (default `true`).
     
