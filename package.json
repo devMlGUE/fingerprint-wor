@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "type": "module",
   "description": "package to generate an unique fingerprint based on browser configuration.",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel ./src -d ./lib",
